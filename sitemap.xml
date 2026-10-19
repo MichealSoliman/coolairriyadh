@@ -2,39 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- الصفحة الرئيسية -->
   <url>
-    <loc>https://freshcool.sa/</loc>
+    <loc>https://coolairriyadh.com/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-  <!-- صفحات الخدمات المخططة للنشاط بالرياض -->
-  <url>
-    <loc>https://freshcool.sa/services/air-conditioner-cleaning-riyadh/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://freshcool.sa/services/air-conditioner-maintenance-riyadh/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://freshcool.sa/services/ac-sanitization-riyadh/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://freshcool.sa/services/ac-freon-recharging-riyadh/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://freshcool.sa/services/ac-copper-piping-riyadh/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://freshcool.sa/services/air-conditioner-installation-riyadh/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
+ 
+ 
 </urlset>

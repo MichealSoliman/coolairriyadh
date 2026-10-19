@@ -73,7 +73,7 @@ if (fontsOk) {
 }
 
 // Check Images
-const images = ['hero-ac-technician.jpg', 'ac-cleaning-wash.jpg', 'ac-freon-maintenance.jpg', 'ac-copper-installation.jpg'];
+const images = ['hero-ac-technician.webp', 'ac-cleaning-wash.webp', 'ac-freon-maintenance.webp', 'ac-copper-installation.webp'];
 let imgsOk = true;
 images.forEach(img => {
   if (!fs.existsSync('./assets/images/' + img)) {

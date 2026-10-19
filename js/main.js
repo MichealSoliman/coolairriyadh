@@ -1,5 +1,5 @@
 /**
- * Fresh Cool - Main JavaScript Logic
+ * Cool Air - Main JavaScript Logic
  * التحكم في شريط التنقل، القائمة المتجاوبة، الأسئلة الشائعة، المعرض، وتتبع التحويلات
  */
 
@@ -33,7 +33,7 @@ function initMobileMenu() {
     mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
     toggleBtn.setAttribute('aria-expanded', 'true');
     document.body.style.overflow = 'hidden';
-    
+
     // Set focus to close button or first link
     if (closeBtn) closeBtn.focus();
   }
