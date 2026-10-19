@@ -1,0 +1,11 @@
+# robots.txt for Fresh Cool (شركة مكيفات بالرياض)
+# يسمح لمحركات البحث بفهرسة الصفحات العامة والموارد الأساسية لتصيير الصفحة (CSS / JS / Images)
+
+User-agent: *
+Allow: /
+Allow: /css/
+Allow: /js/
+Allow: /assets/
+
+# خريطة الموقع المعتمدة (يتم تحديث الدومين عند إطلاق النطاق النهائي)
+Sitemap: https://freshcool.sa/sitemap.xml
