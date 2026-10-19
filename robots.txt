@@ -7,5 +7,5 @@ Allow: /css/
 Allow: /js/
 Allow: /assets/
 
-# خريطة الموقع المعتمدة (يتم تحديث الدومين عند إطلاق النطاق النهائي)
-Sitemap: https://freshcool.sa/sitemap.xml
+# خريطة الموقع المعتمدة
+Sitemap: https://coolairriyadh.com/sitemap.xml
