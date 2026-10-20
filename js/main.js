@@ -96,8 +96,9 @@ function initContactLinks() {
       el.href = `tel:${phone}`;
       el.classList.remove('hidden');
     } else {
-      // عند عدم توفر رقم معتمد، يتم توجيه الزائر لنموذج الطلب بدل رابط وهمي
-      el.href = '#inquiry';
+      // عند عدم توفر رقم معتمد، يتم توجيه الزائر لنموذج الطلب بدل رابط وهمي مع دعم الصفحات المتداخلة
+      const fallback = el.getAttribute('data-fallback-href') || (document.getElementById('inquiry') ? '#inquiry' : '/#inquiry');
+      el.href = fallback;
       const label = el.querySelector('.btn-label');
       if (label && label.dataset.fallbackText) {
         label.textContent = label.dataset.fallbackText;

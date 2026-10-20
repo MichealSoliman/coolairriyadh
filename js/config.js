@@ -21,7 +21,7 @@ const SITE_CONFIG = {
   contact: {
     phone: '',      // مثال عند التوفر: '+966500000000'
     whatsapp: '',   // مثال عند التوفر: '966500000000'
-    email: '',      // مثال عند التوفر: 'info@freshcool.sa'
+    email: '',      // مثال عند التوفر: 'info@coolairriyadh.com'
     address: '',    // عنوان المقر الفعلي عند توفره
   },
 
