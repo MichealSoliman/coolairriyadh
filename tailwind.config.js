@@ -4,6 +4,7 @@ module.exports = {
     "./index.html",
     "./404.html",
     "./ac-cleaning-riyadh/**/*.html",
+    "./air-conditioner-maintenance-riyadh/**/*.html",
     "./js/**/*.js",
     "./src/**/*.{html,js}"
   ],
