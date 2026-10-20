@@ -87,7 +87,17 @@ function initContactLinks() {
   if (typeof SITE_CONFIG === 'undefined') return;
 
   const phone = SITE_CONFIG.contact?.phone?.trim();
-  const whatsapp = SITE_CONFIG.contact?.whatsapp?.trim();
+  const displayPhone = SITE_CONFIG.contact?.displayPhone?.trim() || phone;
+  let whatsapp = SITE_CONFIG.contact?.whatsapp?.trim();
+
+  // تنظيف وتنسيق رقم واتساب للرابط الدولي المباشر
+  if (whatsapp) {
+    let cleanWa = whatsapp.replace(/[^0-9]/g, '');
+    if (cleanWa.startsWith('01') && cleanWa.length === 11) {
+      cleanWa = '20' + cleanWa.substring(1);
+    }
+    whatsapp = cleanWa;
+  }
 
   // عناصر الهاتف
   const phoneLinks = document.querySelectorAll('[data-contact-phone]');
@@ -95,6 +105,10 @@ function initContactLinks() {
     if (phone) {
       el.href = `tel:${phone}`;
       el.classList.remove('hidden');
+      const phoneDisplay = el.querySelector('[data-phone-display]');
+      if (phoneDisplay) {
+        phoneDisplay.textContent = displayPhone;
+      }
     } else {
       // عند عدم توفر رقم معتمد، يتم توجيه الزائر لنموذج الطلب بدل رابط وهمي مع دعم الصفحات المتداخلة
       const fallback = el.getAttribute('data-fallback-href') || (document.getElementById('inquiry') ? '#inquiry' : '/#inquiry');
@@ -103,6 +117,14 @@ function initContactLinks() {
       if (label && label.dataset.fallbackText) {
         label.textContent = label.dataset.fallbackText;
       }
+    }
+  });
+
+  // عناصر عرض رقم الهاتف في النصوص
+  const phoneTextElements = document.querySelectorAll('[data-phone-text]');
+  phoneTextElements.forEach(el => {
+    if (displayPhone) {
+      el.textContent = displayPhone;
     }
   });
 
