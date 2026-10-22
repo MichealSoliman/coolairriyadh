@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "node test-verify.js && node test-cleaning-page.js && node test-maintenance-page.js",
+    "test": "node test-verify.js && node test-cleaning-page.js && node test-maintenance-page.js && node test-freon-page.js",
     "dev": "tailwindcss -i ./src/input.css -o ./css/style.css --watch",
     "build": "tailwindcss -i ./src/input.css -o ./css/style.css --minify",
     "build:dev": "tailwindcss -i ./src/input.css -o ./css/style.css"
