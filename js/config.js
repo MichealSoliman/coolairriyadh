@@ -52,8 +52,8 @@ const SITE_CONFIG = {
     {
       id: 'cleaning',
       title: 'تنظيف المكيفات',
-      slug: 'air-conditioner-cleaning-riyadh',
-      targetPath: '/services/air-conditioner-cleaning-riyadh/',
+      slug: 'ac-cleaning-riyadh',
+      targetPath: '/ac-cleaning-riyadh/',
       shortDesc: 'تنظيف المكيفات وإزالة الأتربة المتراكمة وفق نوع الوحدة وحالتها، مع العناية بالفلاتر والأجزاء المناسبة للتنظيف.',
       icon: 'sparkles'
     },
@@ -61,7 +61,7 @@ const SITE_CONFIG = {
       id: 'maintenance',
       title: 'صيانة وإصلاح المكيفات',
       slug: 'air-conditioner-maintenance-riyadh',
-      targetPath: '/services/air-conditioner-maintenance-riyadh/',
+      targetPath: '/air-conditioner-maintenance-riyadh/',
       shortDesc: 'فحص مشكلات التشغيل وضعف التبريد والأعطال الكهربائية أو الميكانيكية، وتحديد الإجراء المناسب بعد التشخيص.',
       icon: 'wrench'
     },
@@ -69,7 +69,7 @@ const SITE_CONFIG = {
       id: 'sanitization',
       title: 'تعقيم وغسيل المكيفات',
       slug: 'ac-sanitization-riyadh',
-      targetPath: '/services/ac-sanitization-riyadh/',
+      targetPath: '/ac-sanitization-riyadh/',
       shortDesc: 'تنظيف الأجزاء المناسبة وتعقيمها عند ملاءمة ذلك لنوع الوحدة، باستخدام مواد وأساليب متوافقة مع تعليمات المصنع.',
       icon: 'shield-check'
     },
@@ -77,7 +77,7 @@ const SITE_CONFIG = {
       id: 'freon',
       title: 'شحن فريون المكيفات',
       slug: 'ac-freon-recharging-riyadh',
-      targetPath: '/services/ac-freon-recharging-riyadh/',
+      targetPath: '/ac-freon-recharging-riyadh/',
       shortDesc: 'فحص أداء التبريد والتحقق من احتمال وجود تسرب، ثم تحديد الحاجة إلى الإصلاح وشحن وسيط التبريد المناسب وفق مواصفات الجهاز.',
       icon: 'gauge'
     },
@@ -85,15 +85,15 @@ const SITE_CONFIG = {
       id: 'copper',
       title: 'تمديد نحاس المكيفات',
       slug: 'ac-copper-piping-riyadh',
-      targetPath: '/services/ac-copper-piping-riyadh/',
+      targetPath: '/ac-copper-piping-riyadh/',
       shortDesc: 'تنفيذ تمديدات مواسير النحاس المناسبة لنوع المكيف ومتطلبات التركيب، مع مراعاة العزل والتوصيلات واختبارات العمل اللازمة.',
       icon: 'git-commit'
     },
     {
       id: 'installation',
       title: 'تركيب وفك المكيفات',
-      slug: 'air-conditioner-installation-riyadh',
-      targetPath: '/services/air-conditioner-installation-riyadh/',
+      slug: 'ac-installation-riyadh',
+      targetPath: '/ac-installation-riyadh/',
       shortDesc: 'تركيب المكيفات أو فكها وإعادة تركيبها وفق مواصفات الجهاز ومتطلبات الموقع، مع التحقق من التوصيلات والتشغيل.',
       icon: 'box'
     }
