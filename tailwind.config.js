@@ -13,6 +13,7 @@ module.exports = {
     "./ac-sanitization-riyadh/**/*.html",
     "./terms/**/*.html",
     "./privacy-policy/**/*.html",
+    "./blog/**/*.html",
     "./js/**/*.js",
     "./src/**/*.{html,js}"
   ],
