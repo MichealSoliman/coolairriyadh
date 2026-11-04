@@ -1,12 +1,18 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./index.html",
-    "./404.html",
+    "./*.html",
+    "./our-services/**/*.html",
+    "./about-us/**/*.html",
+    "./contact-us/**/*.html",
     "./ac-cleaning-riyadh/**/*.html",
     "./air-conditioner-maintenance-riyadh/**/*.html",
     "./ac-freon-recharging-riyadh/**/*.html",
     "./ac-copper-piping-riyadh/**/*.html",
+    "./ac-installation-riyadh/**/*.html",
+    "./ac-sanitization-riyadh/**/*.html",
+    "./terms/**/*.html",
+    "./privacy-policy/**/*.html",
     "./js/**/*.js",
     "./src/**/*.{html,js}"
   ],

@@ -145,58 +145,88 @@
     <!-- ========================================================
        1. شريط التنقل (Header / Navbar)
   ======================================================== -->
-    <header
-        class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-border shadow-xs transition-all duration-300">
+    <!-- ========================================================
+       1. شريط التنقل العلوي (Header / Navbar)
+    ======================================================== -->
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-border shadow-xs transition-all duration-300">
         <div class="max-w-container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
 
                 <!-- الشعار (Brand Logo) -->
-                <a href="/#top" class="flex items-center gap-3 group focus:outline-hidden"
+                <a href="/" class="flex items-center gap-3 group focus:outline-hidden"
                     aria-label="Cool Air كول إير - الصفحة الرئيسية">
-                    <img src="/assets/images/logo.webp" alt="Cool Air Logo" class="w-11 h-11 rounded-xl object-contain shadow-soft transition-transform group-hover:scale-105" width="44" height="44">
+                    <img src="/assets/images/logo.webp" alt="Cool Air Logo"
+                        class="w-11 h-11 rounded-xl object-contain shadow-soft transition-transform group-hover:scale-105"
+                        width="44" height="44">
                     <div>
-                        <span class="block text-xl sm:text-2xl font-extrabold text-primary tracking-tight leading-none">Cool
-                            Air</span>
-                        <span class="block text-xs font-medium text-muted mt-1">كول إير — مكيفات الرياض</span>
+                        <span class="block text-xl sm:text-2xl font-extrabold text-primary tracking-tight leading-none group-hover:text-accent transition-colors">
+                            Cool Air
+                        </span>
+                        <span class="block text-xs font-semibold text-accent mt-1">كول إير — مكيفات الرياض</span>
                     </div>
                 </a>
 
                 <!-- روابط التنقل للشاشات الكبيرة (Desktop Navigation) -->
-                <nav class="hidden lg:flex items-center gap-7" aria-label="التنقل الرئيسي">
-                    <a href="/#top"
-                        class="text-sm font-semibold text-text hover:text-accent transition-colors duration-200">الرئيسية</a>
-                    <a href="/#services"
-                        class="text-sm font-semibold text-text hover:text-accent transition-colors duration-200">خدماتنا</a>
-                    <a href="#importance"
-                        class="text-sm font-semibold text-text hover:text-accent transition-colors duration-200">أهمية
-                        التعقيم</a>
-                    <a href="#types"
-                        class="text-sm font-semibold text-text hover:text-accent transition-colors duration-200">أنواع
-                        المكيفات</a>
-                    <a href="#process"
-                        class="text-sm font-semibold text-text hover:text-accent transition-colors duration-200">خطوات
-                        الخدمة</a>
-                    <a href="#pricing"
-                        class="text-sm font-semibold text-text hover:text-accent transition-colors duration-200">التكلفة</a>
-                    <a href="#faq"
-                        class="text-sm font-semibold text-text hover:text-accent transition-colors duration-200">الأسئلة
-                        الشائعة</a>
+                <nav class="hidden xl:flex items-center gap-7" aria-label="التنقل الرئيسي">
+                    <a href="/" class="text-sm font-semibold text-text hover:text-accent transition-colors py-2">الرئيسية</a>
+
+                    <!-- خدماتنا مع قائمة منسدلة (Services Dropdown) -->
+                    <div class="relative group">
+                        <a href="/our-services/" class="flex items-center gap-1.5 text-sm font-bold text-accent transition-colors py-2">
+                            <span>خدماتنا</span>
+                            <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </a>
+                        <div class="absolute top-full right-0 w-64 pt-2 hidden group-hover:block z-50">
+                            <div class="bg-white rounded-xl shadow-elevated border border-border p-2 space-y-1">
+                                <a href="/our-services/" class="flex items-center justify-between px-3 py-2 rounded-lg text-sm font-semibold text-text hover:text-accent hover:bg-surface transition-colors">
+                                    <span>دليل الخدمات الشامل</span>
+                                    <span class="text-xs bg-cyan-light px-2 py-0.5 rounded-full font-medium">الكل</span>
+                                </a>
+                                <div class="border-t border-border/60 my-1"></div>
+                                <a href="/air-conditioner-maintenance-riyadh/" class="block px-3 py-2 rounded-lg text-sm text-text hover:text-accent hover:bg-surface transition-colors">
+                                    صيانة مكيفات بالرياض
+                                </a>
+                                <a href="/ac-cleaning-riyadh/" class="block px-3 py-2 rounded-lg text-sm text-text hover:text-accent hover:bg-surface transition-colors">
+                                    تنظيف وغسيل مكيفات
+                                </a>
+                                <a href="/ac-installation-riyadh/" class="block px-3 py-2 rounded-lg text-sm text-text hover:text-accent hover:bg-surface transition-colors">
+                                    فك وتركيب مكيفات
+                                </a>
+                                <a href="/ac-freon-recharging-riyadh/" class="block px-3 py-2 rounded-lg text-sm text-text hover:text-accent hover:bg-surface transition-colors">
+                                    شحن فريون مكيفات
+                                </a>
+                                <a href="/ac-copper-piping-riyadh/" class="block px-3 py-2 rounded-lg text-sm text-text hover:text-accent hover:bg-surface transition-colors">
+                                    تمديد نحاس مكيفات
+                                </a>
+                                <a href="/ac-sanitization-riyadh/" class="block px-3 py-2 rounded-lg text-sm font-bold text-accent bg-surface transition-colors">
+                                    تعقيم وتطهير مكيفات
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="/about-us/" class="text-sm font-semibold text-text hover:text-accent transition-colors py-2">من نحن</a>
+                    <a href="/#pricing" class="text-sm font-semibold text-text hover:text-accent transition-colors py-2">الأسعار</a>
+                    <a href="/#service-areas" class="text-sm font-semibold text-text hover:text-accent transition-colors py-2">أحياء الرياض</a>
+                    <a href="/#faq" class="text-sm font-semibold text-text hover:text-accent transition-colors py-2">الأسئلة الشائعة</a>
+                    <a href="/contact-us/" class="text-sm font-semibold text-text hover:text-accent transition-colors py-2">اتصل بنا</a>
                 </nav>
 
                 <!-- أزرار الإجراءات في شريط التنقل -->
                 <div class="hidden sm:flex items-center gap-3">
-                    <a href="tel:0558577619" data-contact-phone
-                        data-track-event="navbar_call_click"
-                        class="inline-flex items-center justify-center gap-2 h-11 px-4 sm:px-5 rounded-xl bg-accent hover:bg-accent-dark text-white text-sm font-bold transition-all shadow-soft active:scale-95">
-                        <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                            aria-hidden="true">
+                    <a href="tel:0558577619" data-contact-phone data-track-event="navbar_call_click"
+                        class="inline-flex items-center justify-center gap-2 h-11 px-4 sm:px-5 rounded-xl bg-accent hover:bg-accent-dark text-white text-sm font-bold transition-all shadow-soft active:scale-95"
+                        aria-label="اتصل بنا: 0558577619">
+                        <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                         </svg>
                         <span class="btn-label" data-phone-display>0558577619</span>
                     </a>
 
-                    <a href="https://wa.me/966558577619?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%82%D9%85%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A9%20%D8%AA%D8%B9%D9%82%D9%8A%D9%85%20%D8%A7%D9%84%D9%85%D9%83%D9%8A%D9%81%D8%A7%D8%AA%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6."
+                    <a href="https://wa.me/966558577619?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%82%D9%85%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%20%D8%A7%D9%84%D9%85%D9%83%D9%8A%D9%81%D8%A7%D8%AA%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6."
                         data-contact-whatsapp data-track-event="navbar_whatsapp_click"
                         class="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-[#25D366] hover:bg-[#1EBE5D] text-white transition-all shadow-soft active:scale-95"
                         aria-label="تواصل معنا عبر واتساب: 0558577619">
@@ -209,77 +239,67 @@
 
                 <!-- زر قائمة الموبايل -->
                 <button id="mobile-menu-toggle" type="button"
-                    class="lg:hidden inline-flex items-center justify-center w-11 h-11 rounded-xl text-primary hover:text-accent hover:bg-surface border border-border transition-colors"
+                    class="xl:hidden inline-flex items-center justify-center w-11 h-11 rounded-xl text-primary hover:text-accent hover:bg-surface border border-border transition-colors"
                     aria-expanded="false" aria-controls="mobile-menu" aria-label="فتح قائمة التنقل">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h16M4 18h16" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                     </svg>
                 </button>
 
             </div>
         </div>
 
-        <!-- قائمة الموبايل المنزلقة -->
+        <!-- قائمة الموبايل المنزلقة (Accessible Mobile Menu) -->
         <div id="mobile-menu"
-            class="hidden fixed inset-0 z-50 bg-primary/60 backdrop-blur-xs transition-opacity duration-200"
+            class="hidden fixed inset-0 z-50 bg-primary/60 backdrop-blur-sm transition-opacity duration-200"
             role="dialog" aria-modal="true" aria-label="قائمة الموبايل">
-            <div class="fixed inset-y-0 right-0 w-full max-w-xs bg-white shadow-2xl flex flex-col justify-between p-6">
+            <div class="fixed inset-y-0 right-0 w-full max-w-xs bg-white shadow-2xl flex flex-col justify-between p-6 overflow-y-auto">
                 <div>
                     <div class="flex items-center justify-between pb-6 border-b border-border">
                         <div class="flex items-center gap-2">
                             <img src="/assets/images/logo.webp" alt="Cool Air" class="w-9 h-9 rounded-lg object-contain" width="36" height="36">
-                            <span class="font-bold text-lg text-primary">Cool Air</span>
+                            <div>
+                                <span class="font-bold text-lg text-primary block leading-none">Cool Air</span>
+                                <span class="text-xs text-accent font-semibold">شركة مكيفات بالرياض</span>
+                            </div>
                         </div>
                         <button id="mobile-menu-close" type="button"
-                            class="p-2 text-muted hover:text-primary rounded-lg hover:bg-surface"
+                            class="p-2 text-muted hover:text-primary rounded-lg hover:bg-surface focus:outline-none"
                             aria-label="إغلاق القائمة">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M6 18L18 6M6 6l12 12" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                             </svg>
                         </button>
                     </div>
 
-                    <nav class="flex flex-col gap-2 pt-6" aria-label="تنقل الموبايل">
-                        <a href="/#top"
-                            class="px-3 py-2.5 rounded-lg text-base font-semibold text-primary hover:bg-surface hover:text-accent transition-colors">الرئيسية</a>
-                        <a href="/#services"
-                            class="px-3 py-2.5 rounded-lg text-base font-medium text-text hover:bg-surface hover:text-accent transition-colors">خدماتنا</a>
-                        <a href="#importance"
-                            class="px-3 py-2.5 rounded-lg text-base font-medium text-text hover:bg-surface hover:text-accent transition-colors">أهمية
-                            التعقيم</a>
-                        <a href="#types"
-                            class="px-3 py-2.5 rounded-lg text-base font-medium text-text hover:bg-surface hover:text-accent transition-colors">أنواع
-                            المكيفات</a>
-                        <a href="#process"
-                            class="px-3 py-2.5 rounded-lg text-base font-medium text-text hover:bg-surface hover:text-accent transition-colors">خطوات
-                            الخدمة</a>
-                        <a href="#pricing"
-                            class="px-3 py-2.5 rounded-lg text-base font-medium text-text hover:bg-surface hover:text-accent transition-colors">التكلفة</a>
-                        <a href="#faq"
-                            class="px-3 py-2.5 rounded-lg text-base font-medium text-text hover:bg-surface hover:text-accent transition-colors">الأسئلة
-                            الشائعة</a>
+                    <nav class="flex flex-col gap-3 mt-6" aria-label="تنقل الموبايل">
+                        <a href="/" class="text-base font-semibold text-text hover:text-accent transition-colors px-3 py-2 rounded-lg hover:bg-surface">الرئيسية</a>
+                        <a href="/our-services/" class="text-base font-bold text-accent transition-colors px-3 py-2 rounded-lg bg-surface">خدماتنا</a>
+                        <a href="/about-us/" class="text-base font-semibold text-text hover:text-accent transition-colors px-3 py-2 rounded-lg hover:bg-surface">من نحن</a>
+                        <a href="/#pricing" class="text-base font-semibold text-text hover:text-accent transition-colors px-3 py-2 rounded-lg hover:bg-surface">الأسعار والتكلفة</a>
+                        <a href="/#service-areas" class="text-base font-semibold text-text hover:text-accent transition-colors px-3 py-2 rounded-lg hover:bg-surface">أحياء الرياض</a>
+                        <a href="/#faq" class="text-base font-semibold text-text hover:text-accent transition-colors px-3 py-2 rounded-lg hover:bg-surface">الأسئلة الشائعة</a>
+                        <a href="/contact-us/" class="text-base font-semibold text-text hover:text-accent transition-colors px-3 py-2 rounded-lg hover:bg-surface">اتصل بنا</a>
                     </nav>
                 </div>
 
-                <div class="pt-6 border-t border-border flex flex-col gap-3">
+                <div class="pt-6 border-t border-border flex flex-col gap-3 mt-6">
                     <a href="tel:0558577619" data-contact-phone
-                        class="w-full flex items-center justify-center gap-2 h-12 px-4 rounded-xl bg-accent hover:bg-accent-dark text-white font-semibold text-sm shadow-soft transition-colors">
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        class="flex items-center justify-center gap-2 h-12 rounded-xl bg-accent text-white font-bold text-sm shadow-soft">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                         </svg>
                         <span>اتصال مباشر: <span dir="ltr">0558577619</span></span>
                     </a>
-                    <a href="https://wa.me/966558577619?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%82%D9%85%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A9%20%D8%AA%D8%B9%D9%82%D9%8A%D9%85%20%D8%A7%D9%84%D9%85%D9%83%D9%8A%D9%81%D8%A7%D8%AA%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6."
+                    <a href="https://wa.me/966558577619?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%82%D9%85%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%20%D8%A7%D9%84%D9%85%D9%83%D9%8A%D9%81%D8%A7%D8%AA%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6."
                         data-contact-whatsapp
-                        class="w-full flex items-center justify-center gap-2 h-12 px-4 rounded-xl bg-[#25D366] hover:bg-[#1EBE5D] text-white font-semibold text-sm shadow-soft transition-colors">
-                        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                        class="flex items-center justify-center gap-2 h-12 rounded-xl bg-[#25D366] text-white font-bold text-sm shadow-soft">
+                        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
                             <path
                                 d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-5.46-4.45-9.92-9.91-9.92zm5.78 14.01c-.24.68-1.4 1.26-1.92 1.33-.51.07-1.16.1-3.37-.81-2.83-1.17-4.66-4.06-4.8-4.25-.14-.19-1.15-1.53-1.15-2.92s.72-2.07.98-2.35c.26-.28.57-.35.76-.35.19 0 .38 0 .54.01.18.01.42-.07.65.48.24.58.82 2 .89 2.15.07.15.12.33.02.53-.1.2-.15.33-.3.51-.15.17-.32.39-.46.52-.15.15-.31.31-.13.62.18.31.8 1.32 1.72 2.14 1.18 1.05 2.17 1.38 2.48 1.53.31.15.49.13.67-.08.18-.21.78-.91.99-1.22.21-.31.42-.26.7-.15.28.11 1.78.84 2.09.99.31.15.51.23.59.36.08.13.08.76-.16 1.44z" />
                         </svg>
-                        <span>محادثة واتساب: <span dir="ltr">0558577619</span></span>
+                        <span>محادثة واتساب مباشرة</span>
                     </a>
                 </div>
             </div>
