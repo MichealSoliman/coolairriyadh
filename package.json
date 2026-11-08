@@ -8,6 +8,8 @@
     "dev": "tailwindcss -i ./src/input.css -o ./css/style.css --watch",
     "build": "tailwindcss -i ./src/input.css -o ./css/style.css --minify",
     "build:dev": "tailwindcss -i ./src/input.css -o ./css/style.css",
+    "schema": "node scripts/build-schema.mjs",
+    "schema:validate": "node scripts/validate-schema.mjs",
     "start": "npx serve ."
   },
   "keywords": [],
