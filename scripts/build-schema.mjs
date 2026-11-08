@@ -80,6 +80,7 @@ function generateGraphForPage(page, data) {
       'name': page.serviceName,
       'description': page.description,
       'isPartOf': { '@id': 'https://coolairriyadh.com/#website' },
+      'about': { '@id': `${page.url}#service` },
       'breadcrumb': { '@id': `${page.url}#breadcrumb` },
       'inLanguage': 'ar'
     });
@@ -148,6 +149,51 @@ function generateGraphForPage(page, data) {
       'inLanguage': 'ar'
     });
 
+    // ItemList for services
+    graph.push({
+      '@type': 'ItemList',
+      '@id': `${page.url}#itemlist`,
+      'name': 'قائمة خدمات المكيفات بالرياض',
+      'itemListElement': [
+        {
+          '@type': 'ListItem',
+          'position': 1,
+          'name': 'صيانة مكيفات بالرياض',
+          'url': 'https://coolairriyadh.com/air-conditioner-maintenance-riyadh/'
+        },
+        {
+          '@type': 'ListItem',
+          'position': 2,
+          'name': 'تنظيف مكيفات بالرياض',
+          'url': 'https://coolairriyadh.com/ac-cleaning-riyadh/'
+        },
+        {
+          '@type': 'ListItem',
+          'position': 3,
+          'name': 'تعقيم مكيفات بالرياض',
+          'url': 'https://coolairriyadh.com/ac-sanitization-riyadh/'
+        },
+        {
+          '@type': 'ListItem',
+          'position': 4,
+          'name': 'فك وتركيب مكيفات بالرياض',
+          'url': 'https://coolairriyadh.com/ac-installation-riyadh/'
+        },
+        {
+          '@type': 'ListItem',
+          'position': 5,
+          'name': 'شحن فريون مكيفات بالرياض',
+          'url': 'https://coolairriyadh.com/ac-freon-recharging-riyadh/'
+        },
+        {
+          '@type': 'ListItem',
+          'position': 6,
+          'name': 'تمديد نحاس مكيفات بالرياض',
+          'url': 'https://coolairriyadh.com/ac-copper-piping-riyadh/'
+        }
+      ]
+    });
+
     // BreadcrumbList
     graph.push({
       '@type': 'BreadcrumbList',
@@ -176,7 +222,7 @@ function generateGraphForPage(page, data) {
       'name': page.name,
       'description': page.description,
       'isPartOf': { '@id': 'https://coolairriyadh.com/#website' },
-      'about': { '@id': 'https://coolairriyadh.com/#business' },
+      'mainEntity': { '@id': 'https://coolairriyadh.com/#business' },
       'breadcrumb': { '@id': `${page.url}#breadcrumb` },
       'inLanguage': 'ar'
     });
@@ -209,7 +255,7 @@ function generateGraphForPage(page, data) {
       'name': page.name,
       'description': page.description,
       'isPartOf': { '@id': 'https://coolairriyadh.com/#website' },
-      'about': { '@id': 'https://coolairriyadh.com/#business' },
+      'mainEntity': { '@id': 'https://coolairriyadh.com/#business' },
       'breadcrumb': { '@id': `${page.url}#breadcrumb` },
       'inLanguage': 'ar'
     });
@@ -234,15 +280,15 @@ function generateGraphForPage(page, data) {
       ]
     });
   } else if (page.type === 'blog') {
-    // Blog
+    // CollectionPage / Blog
     graph.push({
-      '@type': 'Blog',
+      '@type': 'CollectionPage',
       '@id': `${page.url}#webpage`,
       'url': page.url,
       'name': page.name,
       'description': page.description,
       'isPartOf': { '@id': 'https://coolairriyadh.com/#website' },
-      'publisher': { '@id': 'https://coolairriyadh.com/#business' },
+      'about': { '@id': 'https://coolairriyadh.com/#business' },
       'breadcrumb': { '@id': `${page.url}#breadcrumb` },
       'inLanguage': 'ar'
     });
@@ -267,16 +313,14 @@ function generateGraphForPage(page, data) {
       ]
     });
   } else if (page.type === 'blogPosting') {
-    // BlogPosting
+    // BlogPosting (No unconfirmed datePublished)
     const blogPosting = {
       '@type': 'BlogPosting',
       '@id': `${page.url}#article`,
       'headline': page.headline,
       'description': page.description,
       'image': page.image,
-      'datePublished': page.datePublished,
-      'dateModified': page.dateModified,
-      'mainEntityOfPage': page.url,
+      'mainEntityOfPage': `${page.url}#webpage`,
       'author': { '@id': 'https://coolairriyadh.com/#business' },
       'publisher': { '@id': 'https://coolairriyadh.com/#business' },
       'isPartOf': { '@id': 'https://coolairriyadh.com/#website' },
@@ -398,8 +442,7 @@ for (const page of data.pages) {
   }
 
   fs.writeFileSync(filePath, html, 'utf8');
-  console.log(`Updated schema in: ${page.file} (${schemaObj['@graph'].length} entities)`);
   modifiedCount++;
 }
 
-console.log(`\nSuccessfully injected Schema into ${modifiedCount} pages.`);
+console.log(`Successfully injected updated Schema into ${modifiedCount} pages.`);
